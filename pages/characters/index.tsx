@@ -23,7 +23,10 @@ export default function Characters() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
           {characters && characters.map(character =>
-              <div key={character.id}>{character.name}</div>)}
+              <div key={character.id}>
+                  <div>{character.name}</div>
+                  <Image src={character.image} alt={`Picture of ${character.name}`} width={300} height={300}/>
+              </div>)}
       </main>
     </>
   );
