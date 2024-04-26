@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import {Inter} from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import {useCharacters} from "@/assets/hooks/useCharacters";
+import {CharacterCart} from "@/components/CharacterCart/CharacterCart";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +19,8 @@ export default function Characters() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
           {characters && characters.map(character =>
-              <div key={character.id}>
-                  <div>{character.name}</div>
-                  <Image src={character.image} alt={`Picture of ${character.name}`} width={300} height={300} />
-              </div>)}
+              <CharacterCart key={character.id} character={character} />
+          )}
       </main>
     </>
   );
