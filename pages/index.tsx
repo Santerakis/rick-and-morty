@@ -1,16 +1,12 @@
-import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
+import {getLayout} from "@/components/Layuot/Layuot";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+function Home() {
   return (
     <>
       <HeadMeta title={'Create Next App'} />
-      <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
@@ -104,7 +100,9 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
     </>
   );
 }
+
+Home.getLayout = getLayout
+export default Home
