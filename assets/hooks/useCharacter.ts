@@ -8,7 +8,7 @@ export const useCharacter = (): Nullable<Character> => {
     const [character, setCharacter] = useState<Nullable<Character>>(null)
     const router = useRouter()
     useEffect(() => {
-        axios.get(`https://rickandmortyapi.com/api/character/${router.query.id}`)
+        axios.get(`${process.env.NEXT_PUBLIC_RICK_AND_MORTY_API_URL}/character/${router.query.id}`)
             .then(res => setCharacter(res.data))
     }, []);
 
