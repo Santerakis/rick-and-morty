@@ -1,7 +1,7 @@
 import {useCharacters} from "@/assets/hooks/useCharacters";
 import {CharacterCart} from "@/components/CharacterCart/CharacterCart";
 import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
-import {getLayout} from "@/components/Layuot/Layuot";
+import {getLayout} from "components/Layuot/Layuot";
 import Link from "next/link";
 
 function Characters() {
